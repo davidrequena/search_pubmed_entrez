@@ -57,7 +57,7 @@ max_results = input("Maximum number of results: ")
 
 # Consult PubMed:
 Entrez.email = my_email
-handle_search = Entrez.esearch('pubmed', term = query, retmax = max_results)
+handle_search = Entrez.esearch(db = 'pubmed', term = query, retmax = max_results)
 results = Entrez.read(handle_search)
 handle_search.close()
 
