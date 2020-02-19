@@ -34,8 +34,8 @@ Then, the program will ask you to:
 
 First, provide a query. Here you have two equivalent examples:
 
-    Example 1: (Fowlpox OR FPV) AND (Reticuloendotheliosis OR REV)
-    Example 2: (Fowlpox[All Fields] OR FPV[All Fields]) AND (Reticuloendotheliosis[All Fields] OR REV[All Fields])
+    Example 1: (genome* OR GWAS) AND (Tuberculosis OR TB OR TBC)
+    Example 2: (genome*[All Fields] OR GWAS[All Fields]) AND (Tuberculosis[All Fields] OR TB[All Fields] OR TBC[All Fields])
 
 Second, provide an e-mail address (optional). You can just say no.
 
