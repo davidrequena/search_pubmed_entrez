@@ -44,6 +44,13 @@ Third, the maximum number of results desired.
 I'm including an example of the output table.
 
 
+### POTENTIAL ERROR:
+In Mac OS X, if the following error happens:
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1056)>
+
+Try this: https://stackoverflow.com/questions/50236117/
+
+
 ### REFEFENCE:
 Description of the Entrez package:
 1. https://biopython.org/DIST/docs/api/Bio.Entrez-module.html?fbclid=IwAR1SU1aXV64JJKpFwjy4Dqbf0hGdguOAubGLPVHes8U_wrKMnQE-GuIdPwo
