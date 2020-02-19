@@ -26,7 +26,7 @@
 #-------#
 # USAGE #
 #-------#
-# Just doble-click on the script to execute it. This can also be called from the Terminal.
+# Just double-click on the script to execute it. This can also be called from the Terminal.
 # Then, the program will ask you to:
 #
 # First, provide a query. Here you have two equivalent examples:
@@ -65,7 +65,6 @@ handle_search.close()
 articles_df = pd.DataFrame(columns = ['PMID',
                                       'ePublication_date',
                                       'Title',
-                                      'Journal_Abbrev',
                                       'Authors',
                                       'Journal',
                                       'DOI',
@@ -80,11 +79,10 @@ for article_id in results['IdList']:
     articles_df = articles_df.append({u'PMID': article[0]['Id'],
                                       u'ePublication_date': article[0]['EPubDate'],
                                       u'Title': article[0]['Title'],
-                                      u'Journal_Abbrev': article[0]['Source'],
                                       u'Authors': '; '.join(article[0]['AuthorList']),
                                       u'Journal': article[0]['FullJournalName'],
                                       u'DOI': article[0]['DOI'],
-                                      u'Language': article[0]['LangList']}, ignore_index=True)
+                                      u'Language': '; '.join(article[0]['LangList'])}, ignore_index=True)
 
 # Print the top 5 rows of the dataframe:
 print("First 5 results:")
