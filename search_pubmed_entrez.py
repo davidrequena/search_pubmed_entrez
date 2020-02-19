@@ -70,10 +70,16 @@ articles_df = pd.DataFrame(columns = ['PMID',
                                       'DOI',
                                       'Language'])
 
+# Collect the metadata of each article ID obtained
 for article_id in results['IdList']:
     handle_retrieve = Entrez.esummary(db = 'pubmed', id = article_id, retmode = 'xml')
     article = Entrez.read(handle_retrieve)
     handle_retrieve.close()
+
+    try:
+        string_doi = article[0]['DOI']
+    except:
+        string_doi = ''
 
     # Collect the article info
     articles_df = articles_df.append({u'PMID': article[0]['Id'],
@@ -81,7 +87,7 @@ for article_id in results['IdList']:
                                       u'Title': article[0]['Title'],
                                       u'Authors': '; '.join(article[0]['AuthorList']),
                                       u'Journal': article[0]['FullJournalName'],
-                                      u'DOI': article[0]['DOI'],
+                                      u'DOI': string_doi,
                                       u'Language': '; '.join(article[0]['LangList'])}, ignore_index=True)
 
 # Print the top 5 rows of the dataframe:
