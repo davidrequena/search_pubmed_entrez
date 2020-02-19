@@ -29,7 +29,7 @@ You need to have installed Python 3 (https://www.python.org/downloads/) and the 
 
 
 ### USAGE
-Just doble-click on the script to execute it. This can also be called from the Terminal.
+Just double-click on the script to execute it. This can also be called from the Terminal.
 Then, the program will ask you to:
 
 First, provide a query. Here you have two equivalent examples:
