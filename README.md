@@ -10,6 +10,13 @@ The Rockefeller University. New York, USA.
 
 Contact: drequena@rockefeller.edu / d.requena.a@gmail.com
 
+### CITATION
+I'm using Zenodo. Please use the following DOI to cite my code:
+
+<a href="https://zenodo.org/badge/latestdoi/241541461"><img src="https://zenodo.org/badge/241541461.svg" alt="DOI"></a>
+
+DOI: 10.5281/zenodo.3733158
+
 
 ### DESCRIPTION
 This code asks the user for a query to be searched in PubMed. This can include Field Tags:
